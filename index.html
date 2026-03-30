@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuengruethai</title>
+
+<style>
+:root {
+    --pink: #ffd6e8;
+    --purple: #e5d4ff;
+    --blue: #d4f1ff;
+    --accent1: #a2d2ff;
+    --accent2: #cdb4db;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+
+
+    background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+    background-size: 300% 300%;
+    animation: bgMove 10s ease infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.container {
+    text-align: center;
+}
+
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #555;
+    text-shadow: 2px 2px rgba(255,255,255,0.6);
+}
+
+.button-container {
+    display: flex;
+    gap: 50px;
+}
+
+
+.btn {
+    padding: 30px 70px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #444;
+
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+
+.btn-left {
+    border: 2px solid var(--accent1);
+}
+
+.btn-right {
+    border: 2px solid var(--accent2);
+}
+
+.btn:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+
+.btn-left:hover {
+    background: linear-gradient(45deg, #a2d2ff, #bde0fe);
+    color: white;
+}
+
+.btn-right:hover {
+    background: linear-gradient(45deg, #cdb4db, #ffc8dd);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .btn {
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    
+    <div class="title">NUENGRUETHAI SAKAEW ✨</div>
+
+   
+    <div class="button-container">
+        <a href="mypageA.html" class="btn btn-left">Profile 💖</a>
+        <a href="mypageB.html" class="btn btn-right">Portfolio 🎨</a>
+    </div>
+
+</div>
+
+</body>
+</html>
